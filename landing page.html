@@ -1,0 +1,354 @@
+<html>
+
+<head>
+    <title>BD-Traveller</title>
+    <link rel="stylesheet" href="landingpage.css">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewpoint" content="width-device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<style>
+    input[type=text],
+    input[type=password] {
+        width: 90%;
+        padding: 12px 20px;
+        margin: 8px 26px;
+        display: inline-block;
+        border: 1px solid #dec4c4;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+
+    button {
+        background-color: #1c9520;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 26px;
+        border: none;
+        cursor: pointer;
+        width: 90%;
+        font-size: 20px;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+
+    .imgcontainer {
+        text-align: center;
+        margin: 12px 0 0px 0;
+        position: center;
+    }
+
+    .avatar {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+
+    }
+
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 3;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 4% auto 15% auto;
+        border: 1px solid #888;
+        width: 40%;
+        padding-bottom: 30px;
+    }
+
+
+    .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+
+    .animate {
+        animation: zoom 0.6s
+    }
+
+    @keyframes zoom {
+        from {
+            transform: scale(0)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+</style>
+</style>
+
+<body>
+
+
+
+
+    <section class="header">
+
+        <div class="container">
+            <img src="travel.jpg" style="float: left;">
+
+
+            <button class="login-btn" onclick="document.getElementById('modal-wrapper').style.display='block'">
+                login</button>
+
+            <div id="modal-wrapper" class="modal">
+
+                <form class="modal-content animate" action="/action_page.php">
+
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close"
+                            title="Close PopUp">&times;</span>
+                        <img src="logo.jpg" alt="Avatar" class="avatar">
+                        <h1 style="text-align:center; color:black; padding-top: 50px;">USER LOGIN</h1>
+                    </div>
+
+                    <div class="container">
+                        <input type="text" placeholder="Enter Username" name="uname">
+                        <input type="password" placeholder="Enter Password" name="psw">
+                        <button type="submit">Login</button>
+
+                        <a href="#"
+                            style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot
+                            Password ?</a>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <script>
+
+            var modal = document.getElementById('modal-wrapper');
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <h1>EMBRACE YOUR JOURNEY WITHOUT RESERVATION</h1>
+        <p>TRAVEL THE EARTH BEFORE IT BECOMES HISTORY</p>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="search country or city">
+            <div class="input-group-append">
+                <button type="button" class="input-group-text btn">Search</button>
+            </div>
+    </section>
+
+
+    <section class="features">
+        <h1>Featured Destination</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-img">
+                            <img src="mum.jpg">
+                            <div class="price">
+                                <p>5000RS </p>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+
+
+
+                            </div>
+                        </div>
+                        <div class="feature-details">
+                            <h4>Kolkata</h4>
+                            <p>Kolkata is famous for the title of the City of Joy. Kolkata, formerly known as Calcutta, is the capital city of West Bengal which is very popular for its diverse history. Kolkata is the educational, commercial, Theater, and cultural center of eastern India and is the third-most populous metropolitan city in India.
+                            </p>
+                            <div>
+                                <span><i class="fa fa-map-marker"></i>Kolkata</span>
+                                <span><i class="fa fa-sun-o"></i>3 days</span>
+                                <span><i class="fa fa-moon-o"></i>2 Nights</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-img">
+                            <img src="Delhi.jpg">
+                            <div class="price">
+                                <p>6000RS </p>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+
+
+
+                            </div>
+                        </div>
+                        <div class="feature-details">
+                            <h4>Delhi</h4>
+                            <p>Delhi, officially known as the National Capital Territory of Delhi (NCT), is a bustling metropolis and the capital city of India. It is one of the oldest cities in the world with a rich and diverse history that spans thousands of years. </p>
+                            <div>
+                                <span><i class="fa fa-map-marker"></i>Delhi</span>
+                                <span><i class="fa fa-sun-o"></i>3 days</span>
+                                <span><i class="fa fa-moon-o"></i>2 Nights</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-img">
+                            <img src="Mumbai.jpg">
+                            <div class="price">
+                                <p>6000RS </p>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+
+
+
+                            </div>
+                        </div>
+                        <div class="feature-details">
+                            <h4>Mumbai</h4>
+                            <p>Mumbai is located in the state of Maharashtra. It is famously known as the capital of Maharashtra and the financial capital of India. Earlier it was known as Bombay. Its name is derived from the name of the goddess Mumba (a form of Parvati) who is the goddess of fishermen.</p>
+                            <div>
+                                <span><i class="fa fa-map-marker"> Mumbai</i></span>
+                                <span><i class="fa fa-sun-o"></i>3 days</span>
+                                <span><i class="fa fa-moon-o"></i>2 Nights</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="banner">
+            <div class="banner-highlights">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h2> Get 40% on top destination</h2>
+                            <p>Book your tickets brfore October Month with this discount</p>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="button" class="booking-btn">Book Now</button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="users-feedback">
+            <h1>User Review</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="user-review">
+                            <p>This organization is truly impressive.</p>
+
+                            <h5>Rohit Sharma</h5>
+                            <small>Kolkata</small>
+
+                        </div>
+                        <img src="sk.jpeg.jpg">
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="user-review">
+                            <p>It's a remarkable organization.</p>
+
+                            <h5>Suraj Singh</h5>
+                            <small>Delhi</small>
+
+                        </div>
+                        <img src="rk.jpg">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="user-review">
+                            <p>This organization is outstanding.</p>
+
+                            <h5>Manish Kumar</h5>
+                            <small>Mumbai</small>
+
+                        </div>
+                        <img src="mk.jpg">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="travel.jpg" class="footer-logo">
+                        <p>We are dedicated to providing first-rate service to our clients.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Features</h4>
+                        <p>Deals & Offers</p>
+                        <p>Customer Reviews</p>
+                        <p>cancelation policy</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Contact</h4>
+                        <p> <i class="fa fa-phone-square"></i>+7739819813</p>
+                        <p> <i class="fa fa-envelope"></i>piyushkumar123ac@gmail.com</p>
+                        <p> <i class="fa fa-home"></i>Kolkata, West bengal.</p>
+                    </div>
+                    <div class="col-md-3">
+
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+        </section>
+</body>
+
+</html>
